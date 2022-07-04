@@ -8,7 +8,7 @@ Feature: Fidexi log in fuctionality
 
 
 
-  @fidexi_412
+  @FIDEXI-435 @wip
   Scenario Outline:  Log in fuctionality verification
     When user clicks email blank and enters "<username>"
     Then user clicks password blank and enters "<password>"
@@ -28,7 +28,7 @@ Feature: Fidexi log in fuctionality
       | posmanager111@info.com  | posmanager   |
       | posmanager45@info.com   | posmanager   |
 
-  @fidexi_412
+  @FIDEXI-436 @wip
   Scenario Outline:  Log in fuctionality with invalid credentials verification
     When user clicks email blank and enters "<username>"
     Then user clicks password blank and enters "<password>"
@@ -47,30 +47,35 @@ Feature: Fidexi log in fuctionality
       | posmanager9             | posmanager   |
       | posmanager111@info.com  | posman       |
       | posmanager45@info.com   | manager      |
-  @fidexi_412
+
+  @FIDEXI-442 @wip
   Scenario: "Please fill out this field" message when blanks are empty verification
     When user clicks Log in button
     Then user should see please fill out this field message
-  @fidexi_412
+
+  @FIDEXI-437 @wip
   Scenario: "Please fill out this field" message when password blank is empty verification
     When user clicks email blank and enters username
     Then user clicks Log in button
     And user should see please fill out this field message
-  @fidexi_412
+
+  @FIDEXI-438 @wip
   Scenario: Landing reset password page verification
     When user clicks reset password
     Then user lands on reset password page
 
-  @fidexi_412
+  @FIDEXI-439 @wip
   Scenario: See the password in bullet signs verification
     Then user clicks password blank and enters password
     And password is in bullet signs
-  @fidexi_412
+
+  @FIDEXI-440 @wip
   Scenario: Enter key of the keyboard works verification
     When user clicks email blank and enters username
     Then user clicks password blank enters password and presses enter key
     And user should see title is Odoo
-  @fidexi_412
+
+  @FIDEXI-441 @wip
   Scenario: Enter key of the keyboard negative works verification
     When user clicks email blank and enters username and presses enter key
     And user should see please fill out this field message

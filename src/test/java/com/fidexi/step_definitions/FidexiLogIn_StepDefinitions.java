@@ -85,7 +85,7 @@ public class FidexiLogIn_StepDefinitions {
         Assert.assertEquals(expectedTitle2, actualTitle2);
     }
 
-
+/**
     @And("password is in bullet signs")
     public void passwordIsInBulletSigns() {
         String expectedPassword= "";
@@ -93,7 +93,13 @@ public class FidexiLogIn_StepDefinitions {
         Assert.assertEquals(expectedPassword, actualPassword);
 
     }
-
+*/
+    @And("password is in bullet signs")
+    public void passwordIsInBulletSigns() {
+        String expextedType= "password";
+        String actualtType= fidexiLogInPage.inputPassword.getAttribute("type");
+        Assert.assertEquals(expextedType, actualtType);
+    }
 
     @Then("user clicks password blank enters password and presses enter key")
     public void userClicksPasswordBlankEntersPasswordAndPressesEnterKey() {
